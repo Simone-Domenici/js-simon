@@ -7,4 +7,17 @@ function generateRandomNumbers() {
     }
     return Array.from(numbers);
   }
-console.log(generateRandomNumbers())
+// console.log(generateRandomNumbers())
+
+// Funzione per visualizzare i numeri nel DOM
+
+function startGame() {
+    const numbersList = document.getElementById('numbers-list');
+    const numbers = generateRandomNumbers();
+    numbers.forEach(number => {
+      const li = document.createElement('li');
+      li.textContent = number;
+      numbersList.appendChild(li);
+})}
+
+startGame()
