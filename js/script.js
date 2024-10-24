@@ -20,4 +20,21 @@ function startGame() {
       numbersList.appendChild(li);
 })}
 
-startGame()
+// startGame()
+
+// Countdown
+
+const countdown = document.getElementById('countdown');
+  let timeLeft = 30;
+
+  const countdownInterval = setInterval(() => {
+    countdown.textContent = timeLeft;
+    timeLeft--;
+
+    if (timeLeft < 0) {
+      clearInterval(countdownInterval);
+      numbersList.style.display = 'none';
+      document.getElementById('answers-form').classList.remove('d-none');
+    }
+}, 1000);
+
