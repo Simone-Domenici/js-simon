@@ -25,7 +25,7 @@ function startGame() {
 // Countdown
 
     const countdown = document.getElementById('countdown');
-      let timeLeft = 30;
+      let timeLeft = 5;
 
       const countdownInterval = setInterval(() => {
         countdown.textContent = timeLeft;
@@ -33,11 +33,11 @@ function startGame() {
 
         if (timeLeft < 0) {
           clearInterval(countdownInterval);
-          numbersList.style.display = 'none';
+          numbersList.classList.toggle('d-none')
           document.getElementById('answers-form').classList.remove('d-none');
         }
     }, 1000);
 }
 
-// startGame()
+startGame()
 
